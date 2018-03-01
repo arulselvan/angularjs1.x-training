@@ -1,0 +1,51 @@
+<html>
+<head>
+    <base href="/" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="angularjs-toaster/toaster.css" />
+</head>
+
+<body ng-app="blogApp">
+    <div class="row">
+        <div class="col-md-3">
+            <side-bar select-section="selectSection(section)" title="title"></side-bar>
+        </div>
+        <div class="view-animate-container col-md-8">
+            <div ng-view class="view-animate">
+            </div>
+        </div>
+        <toaster-container></toaster-container>
+    </div>
+</body>
+
+<script type="text/javascript" src="angular/angular.js"></script>
+<script type="text/javascript" src="angular-route/angular-route.js"></script>
+<script type="text/javascript" src="angular-animate/angular-animate.js"></script>
+
+<script type="text/javascript" src="app.js"></script>
+
+<script type="text/javascript" src="blog/blog.controller.js"></script>
+<script type="text/javascript" src="blog/createPost/createPost.controller.js"></script>
+<script type="text/javascript" src="blog/singlePost/singlePost.controller.js"></script>
+<script type="text/javascript" src="blog/postList/postList.directive.js"></script>
+<script type="text/javascript" src="blog/singlePost/singlePost.directive.js"></script>
+<script type="text/javascript" src="blog/createPost/createPost.directive.js"></script>
+<script type="text/javascript" src="blog/comment/comment.directive.js"></script>
+<script type="text/javascript" src="blog/blog.service.js"></script>
+
+<script type="text/javascript" src="contact/contact.controller.js"></script>
+
+<script type="text/javascript" src="shared/sidebar/sidebar.directive.js"></script>
+<script type="text/javascript" src="shared/services/navigation.service.js"></script>
+<script type="text/javascript" src="shared/filters/arrayToFormatedStringFilter.js"></script>
+
+<script type="text/javascript" src="angularjs-toaster/toaster.js"></script>
+
+</html>

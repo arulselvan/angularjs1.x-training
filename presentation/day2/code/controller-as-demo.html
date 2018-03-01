@@ -1,0 +1,21 @@
+<html>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <body ng-app="myApp">
+       <div ng-controller="mainController as mainVm">
+          <h1> {{mainVm.title}}<h1>
+       </div>
+    </body>
+
+  <script type="text/javascript">
+       var app = angular.module("myApp",[]);
+
+       app.controller("mainController",function(){
+            var vm = this;
+
+            vm.title = "Controller As Demo";
+       });
+
+   </script>
+
+</html>
+

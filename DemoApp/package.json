@@ -1,0 +1,23 @@
+{
+  "name": "demo-app",
+  "version": "1.0.0",
+  "description": "sample application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arul",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.2.32",
+    "angular-animate": "^1.2.32",
+    "angular-route": "^1.2.32",
+    "angularjs-toaster": "^2.2.0",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.2.32",
+    "jasmine-core": "^2.99.1",
+    "karma-jasmine": "^1.1.1"
+  }
+}

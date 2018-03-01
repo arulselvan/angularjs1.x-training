@@ -1,0 +1,39 @@
+<html>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <body ng-app="myApp">
+       <div ng-controller="mainController as mainVm">
+          <h1> {{mainVm.title}}</h1>
+              <div ng-controller="secondController as secondVm">
+                  <h1> {{secondVm.title}}</h1>
+                  <div ng-controller="thirdController as thirdVm">
+                     <h1> {{thirdVm.title}}</h1>
+                     <h1 style="margin-left:30px">{{secondVm.title}}</h1>
+                     <h1 style="margin-left:30px">{{mainVm.title}}</h1>
+                  </div>
+              </div>
+       </div>
+    </body>
+
+  <script type="text/javascript">
+       var app = angular.module("myApp",[]);
+
+       app.controller("mainController",function(){
+          var vm=this;
+          vm.title = "Main  Controller";
+       });
+
+       app.controller("secondController",function(){
+           var vm=this;
+
+            vm.title = "Second Controller";
+       });
+
+       app.controller("thirdController",function(){
+           var vm=this;
+
+            vm.title = "Third Controller";
+       });
+
+   </script>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <body ng-app="myApp">
+       <div ng-controller="mainController">
+          
+
+       <div ng-if="showPosts">
+           <h1>Posts Placeholder</h1>
+       </div>
+
+
+       </div>
+    </body>
+
+  <script type="text/javascript">
+       var app = angular.module("myApp",[]);
+
+       app.controller("mainController",function($scope){
+            
+            $scope.title ="Home Page"
+            $scope.showPosts = true;
+
+       });
+
+   </script>
+
+</html>
+

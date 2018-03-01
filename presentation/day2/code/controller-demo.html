@@ -1,0 +1,25 @@
+<html>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <body ng-app="myApp">
+       <div ng-controller="mainController">
+          <h1> {{title}}<h1>
+          <span ng-bind="title"></span> <br/>  
+          <span ng:bind="title"></span> <br/>  
+          <span ng_bind="title"></span> <br/>  
+          <span data-ng-bind="title"></span> <br/>  
+          <span x-ng-bind="title"></span> <br/>
+
+       </div>
+    </body>
+
+  <script type="text/javascript">
+       var app = angular.module("myApp",[]);
+
+       app.controller("mainController",function($scope){
+            $scope.title = "Home Page";
+       });
+
+   </script>
+
+</html>
+

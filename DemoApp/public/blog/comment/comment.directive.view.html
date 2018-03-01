@@ -1,0 +1,18 @@
+<div class="comments">
+    <button class="fa fa-heart" ng-click="post.likes = post.likes+1"> {{post.likes}}</button>
+    <h3>Comments</h3>
+    <ul>
+        <li ng-repeat="comment in comments">
+            "{{comment.body}}"
+            <cite>- <b>{{comment.name}}</b></cite>
+        </li>
+    </ul>
+    <form name="commentForm" ng-submit="commentForm.$valid && addComment()" novalidate>
+        <h4>Add Comment</h4>
+        <textarea ng-model="comment.body" cols="30" rows="10" required></textarea>
+        <label for="">by:</label>
+        <input type="text" ng-model="comment.name" required placeholder="Name" />
+
+        <input type="submit" value="Submit" />
+    </form>
+</div>

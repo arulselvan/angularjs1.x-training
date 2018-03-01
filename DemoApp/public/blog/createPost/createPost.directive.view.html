@@ -1,0 +1,22 @@
+<form name="postForm" ng-submit="createPost(postForm.$valid)" novalidate>
+    <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
+
+    <!-- Post Title -->
+    <div class="form-group">
+        <label>Post Title</label>
+        <input type="text" name="title" class="form-control" ng-model="post.title" required>
+        <p ng-show="postForm.title.$invalid && !postForm.title.$pristine" class="help-block">You name is required.</p>
+    </div>
+
+    <!-- Post Body -->
+    <div class="form-group">
+        <label>Post Body</label>
+        <textarea rows="14" name="body" class="form-control" ng-model="post.body" required ng-minlength="10" ng-maxlength="100" ></textarea>
+        <p ng-show="postForm.body.$error.minlength" class="help-block">body is too short.</p>
+        <p ng-show="postForm.body.$error.maxlength" class="help-block">body is too long.</p>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary" ng-disabled="postForm.$invalid">Submit</button>
+
+</form>

@@ -1,0 +1,148 @@
+.bg-lightblue{
+    background: lightblue
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+}
+.sidebar {
+  background: #eee;
+  color:#3a8bab;
+  width: 24%;
+  z-index: 9999;
+  padding: 5px 20px;
+  min-height: 100%;
+  position: fixed;
+}
+.sidebar h1 {
+  cursor: pointer;
+}
+.sidebar nav {
+  margin-top: 25px;
+}
+.sidebar nav ul {
+  padding: 0;
+  margin: 0;
+}
+.sidebar nav ul li {
+  display: block;
+  padding: 10px;
+}
+.sidebar nav ul li a {
+  color:#3a8bab;
+  text-decoration: none;
+}
+ul.post-grid {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+ul.post-grid li {
+  padding: 20px;
+  cursor: pointer;
+  transition: background linear 0.5s;
+  border-bottom: 1px solid #3a8bab;
+}
+ul.post-grid li:hover {
+  background: #3a8bab;
+  color: white;
+}
+ul.post-grid li:hover h3 {
+  color: white;
+}
+.content {
+  width: 100%;
+  position: relative;
+  padding: 20px 40px 20px;
+}
+h2,
+h3 {
+  color: #3a8bab;
+}
+.post {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  opacity: 1;
+  padding-bottom: 30px;
+}
+.post cite {
+  display: inline-block;
+  padding: 10px 0;
+}
+.comments ul {
+  margin: 0;
+  padding: 0;
+}
+.comments ul li {
+  list-style-type: none;
+  padding: 20px 5px;
+  border-bottom: 1px #79b9d2 solid;
+}
+.post.ng-hide {
+  opacity: 0;
+}
+.post.ng-hide-add,
+.post.ng-hide-remove {
+  display: block!important;
+}
+form {
+  width: 100%;
+}
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1em;
+}
+.ng-invalid.ng-dirty {
+  border-color: red;
+}
+.ng-valid.ng-dirty {
+  border-color: green;
+}
+img {
+  max-width: 100%;
+}
+
+.help-block {
+  color:red;
+}
+
+.view-animate-container {
+  position:relative;
+  min-height:600px !important;
+  background:white;
+  height:auto;
+  overflow:hidden;
+}
+
+.view-animate {
+  padding:10px;
+}
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  display:block;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:10px;
+}
+
+.view-animate.ng-enter {
+  left:100%;
+}
+.view-animate.ng-enter.ng-enter-active {
+  left:0;
+}
+.view-animate.ng-leave.ng-leave-active {
+  left:-100%;
+}
+
+

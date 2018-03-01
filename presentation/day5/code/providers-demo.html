@@ -1,0 +1,63 @@
+<html>
+    <script type="text/javascript" src="js/angular.js"></script>
+   
+    <body ng-app="myApp">
+       <div ng-controller="myController1">
+          <h1> {{title}}<h1>
+       </div>
+
+       <div ng-controller="myController2">
+          <h1> {{title}}<h1>
+       </div>
+    </body>
+
+  <script type="text/javascript">
+       var app = angular.module("myApp",[]);
+
+       /*app.service('myProvider',function(){                
+            this.title = "Service Sample"           
+       })*/
+
+       /*app.factory('myProvider',function(){       
+            return new function(){
+                this.title = "Factory Sample"
+            }
+       })*/
+
+       function AppDetail(title){
+           this.title = title;
+       }
+       
+       /*app.provider('myProvider',function(){
+           var self=this;
+           this.title ="Sample Provider";
+
+           this.setTitle = function(title){
+                this.title = title;
+           }
+           this.$get = function(){
+                return new AppDetail(this.title);
+           }
+       })*/
+
+       //app.value('myProvider',"Value Sample");
+
+       app.constant('myProvider',"Constant Sample");
+
+       /*app.config(function(myProviderProvider){
+           //myProviderProvider.setTitle("New Title From Config");
+       });*/
+    
+       app.controller("myController1",function($scope,myProvider){
+            $scope.title = myProvider ;
+       });
+
+       app.controller("myController2",function($scope,myProvider){
+            $scope.title = myProvider ;
+       });
+
+   </script>
+
+</html>
+
+
